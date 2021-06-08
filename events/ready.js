@@ -17,5 +17,5 @@ setInterval(() => {
 }, 15000);
     client.log(`${client.user.username} has logged on!`);
 });
-};
+
 
