@@ -117,7 +117,7 @@ SlashCommand: {
               }help [Command] | Have a nice day!`
             ).setDescription(`${Commands.join("\n")}
   
-  Discord Music Bot Version: v${require("../package.json").version}
+  B2C Music Bot Version: v${require("../package.json").version}
   [✨ Support Server](${
     client.config.SupportServer
   }) | By [• B2C || ︵✿ѕнιяσиє‿✿#3593](https://github.com/LemonIcedd)`);
