@@ -61,7 +61,7 @@ module.exports = {
                     if (!player.playing && !player.paused && !player.queue.size) player.play();
                     SongAddedEmbed.setAuthor(`Added to queue`, client.config.IconURL);
                     SongAddedEmbed.setDescription(`[${Searched.tracks[0].info.title}](${Searched.tracks[0].info.uri})`);
-                    SongAddedEmbed.setFooter(`__Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/__`); 
+                    SongAddedEmbed.setFooter(`Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/__`); 
                     SongAddedEmbed.addField("Author", Searched.tracks[0].info.author, true);
                     //SongAddedEmbed.addField("Duration", `\`${prettyMilliseconds(Searched.tracks[0].length, { colonNotation: true })}\``, true);
                     if (player.queue.totalSize > 1) SongAddedEmbed.addField("Position in queue", `${player.queue.size - 0}`, true);
@@ -81,7 +81,7 @@ module.exports = {
                     SongAddedEmbed.setColor("#ffd9da");
                     SongAddedEmbed.setThumbnail(Searched.tracks[0].displayThumbnail());
                     SongAddedEmbed.setDescription(`[${Searched.playlist.name}](${SearchString})`);
-                    SongAddedEmbed.setFooter(`__Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/__`); 
+                    SongAddedEmbed.setFooter(`Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/`); 
                     SongAddedEmbed.addField("Enqueued", `\`${Searched.tracks.length}\` songs`, false);
                     SongAddedEmbed.addField("Playlist duration", `\`${prettyMilliseconds(Searched.playlist.duration, { colonNotation: true })}\``, false);
                     Searching.edit(SongAddedEmbed);
@@ -92,7 +92,7 @@ module.exports = {
                     SongAddedEmbed.setColor("#ffd9da");
                     SongAddedEmbed.setThumbnail(Searched.tracks[0].displayThumbnail());
                     SongAddedEmbed.setDescription(`[${Searched.tracks[0].title}](${Searched.tracks[0].uri})`);
-                    SongAddedEmbed.setFooter(`__Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/__`); 
+                    SongAddedEmbed.setFooter(`Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/`); 
                     SongAddedEmbed.addField("Author", Searched.tracks[0].author, true);
                     SongAddedEmbed.addField("Duration", `\`${prettyMilliseconds(Searched.tracks[0].duration, { colonNotation: true })}\``, true);
                     if (player.queue.totalSize > 1) SongAddedEmbed.addField("Position in queue", `${player.queue.size - 0}`, true);
@@ -164,7 +164,7 @@ module.exports = {
                             SongAddedEmbed.setAuthor(`Added to queue`, client.config.IconURL);
                             SongAddedEmbed.setColor("#ffd9da");
                             SongAddedEmbed.setDescription(`[${Searched.tracks[0].info.title}](${Searched.tracks[0].info.uri})`);
-                            SongAddedEmbed.setFooter(`__Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/__`); 
+                            SongAddedEmbed.setFooter(`Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/`); 
                             SongAddedEmbed.addField("Author", Searched.tracks[0].info.author, true);
                             if (player.queue.totalSize > 1) SongAddedEmbed.addField("Position in queue", `${player.queue.size - 0}`, true);
                             return interaction.send(SongAddedEmbed);
@@ -176,7 +176,7 @@ module.exports = {
                             SongAdded.setAuthor(`Added to queue`, client.config.IconURL);
                             SongAdded.setColor("#ffd9da");
                             SongAdded.setDescription(`[${Searched.tracks[0].info.title}](${Searched.tracks[0].info.uri})`);
-                            SongAddedEmbed.setFooter(`__Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/__`); 
+                            SongAddedEmbed.setFooter(`Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/`); 
                             SongAdded.addField("Author", Searched.tracks[0].info.author, true);
                             if (player.queue.totalSize > 1) SongAdded.addField("Position in queue", `${player.queue.size - 0}`, true);
                             return interaction.send(SongAdded);
@@ -191,6 +191,7 @@ module.exports = {
                         Playlist.setAuthor(`Playlist added to queue`, client.config.IconURL);
                         Playlist.setColor("#ffd9da");
                         Playlist.setDescription(`[${Searched.playlistInfo.name}](${interaction.data.options[0].value})`);
+                        Playlist.setFooter(`Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/`); 
                         Playlist.addField("Enqueued", `\`${Searched.tracks.length}\` songs`, false);
                         return interaction.send(Playlist);
                 }
@@ -216,7 +217,7 @@ module.exports = {
                             SongAddedEmbed.setThumbnail(res.tracks[0].displayThumbnail());
                             SongAddedEmbed.setColor("#ffd9da");
                             SongAddedEmbed.setDescription(`[${res.tracks[0].title}](${res.tracks[0].uri})`);
-                            SongAddedEmbed.setFooter(`__Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/__`); 
+                            SongAddedEmbed.setFooter(`Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/`); 
                             SongAddedEmbed.addField("Author", res.tracks[0].author, true);
                             SongAddedEmbed.addField("Duration", `\`${prettyMilliseconds(res.tracks[0].duration, { colonNotation: true })}\``, true);
                             if (player.queue.totalSize > 1) SongAddedEmbed.addField("Position in queue", `${player.queue.size - 0}`, true);
@@ -230,7 +231,7 @@ module.exports = {
                         SongAdded.setThumbnail(res.tracks[0].displayThumbnail());
                         SongAdded.setColor("#ffd9da");
                         SongAdded.setDescription(`[${res.playlist.name}](${interaction.data.options[0].value})`);
-                        SongAddedEmbed.setFooter(`__Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/__`); 
+                        SongAddedEmbed.setFooter(`Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/`); 
                         SongAdded.addField("Enqueued", `\`${res.tracks.length}\` songs`, false);
                         SongAdded.addField("Playlist duration", `\`${prettyMilliseconds(res.playlist.duration, { colonNotation: true })}\``, false);
                         return interaction.send(SongAdded);
@@ -245,6 +246,7 @@ module.exports = {
                             SongAddedEmbed.setThumbnail(track.displayThumbnail());
                             SongAddedEmbed.setColor("#ffd9da");
                             SongAddedEmbed.setDescription(`[${track.title}](${track.uri})`);
+                            SongAddedEmbed.setFooter(`Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/`); 
                             SongAddedEmbed.addField("Author", track.author, true);
                             SongAddedEmbed.addField("Duration", `\`${prettyMilliseconds(track.duration, { colonNotation: true })}\``, true);
                             if (player.queue.totalSize > 1) SongAddedEmbed.addField("Position in queue", `${player.queue.size - 0}`, true);
@@ -257,7 +259,7 @@ module.exports = {
                             SongAddedEmbed.setThumbnail(track.displayThumbnail());
                             SongAddedEmbed.setColor("#ffd9da");
                             SongAddedEmbed.setDescription(`[${track.title}](${track.uri})`);
-                            SongAddedEmbed.setFooter(`__Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/__`); 
+                            SongAddedEmbed.setFooter(`Dashboard:https://discord-musicbot-1.lemonicedd.repl.co/`); 
                             SongAddedEmbed.addField("Author", track.author, true);
                             SongAddedEmbed.addField("Duration", `\`${prettyMilliseconds(track.duration, { colonNotation: true })}\``, true);
                             if (player.queue.totalSize > 1) SongAddedEmbed.addField("Position in queue", `${player.queue.size - 0}`, true);
