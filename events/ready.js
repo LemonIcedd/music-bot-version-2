@@ -3,7 +3,7 @@ module.exports = async (client) => {
     const arrayOfStatus = [
         `${client.channels.cache.size} channels`,
         "Watching Bad Bitch Club ",
-        `bhelp để xem lệnh của bot nhaaa!`,
+        `>help để xem lệnh của bot nhaaa!`,
         `Powered by shirone`,
         ];
     let index = 0;
