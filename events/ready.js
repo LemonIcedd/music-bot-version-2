@@ -1,10 +1,20 @@
 module.exports = async (client) => {
-  client.Ready = true, 
-  client.user.setPresence({
-    status: "online",  // You can show online, idle, and dnd
-    activity: {
-        name: "Music",  // The message shown
-        type: "LISTENING", // PLAYING, WATCHING, LISTENING, STREAMING,
+  client.on("ready", () => {
+    const arrayOfStatus = [
+        `${client.channels.cache.size} channels`,
+        "Watching Bad Bitch Club ",
+        `bhelp để xem lệnh của bot nhaaa!`,
+        `Powered by shirone`,
+        ];
+    let index = 0;
+setInterval(() => {
+    if(index === arrayOfStatus.length) index = 0;
+    const status = arrayOfStatus[index];
+    client.log(status);
+    client.user.setActivity(status);
+    index++;
+}, 15000);
+    client.log(`${client.user.username} has logged on!`);
     }
 });
     client.Manager.init(client.user.id);
